@@ -1,0 +1,7 @@
+{
+  "name": "adams-foreground-service",
+  "platforms": ["android"],
+  "android": {
+    "modules": ["expo.modules.adamsforeground.ForegroundServiceModule"]
+  }
+}

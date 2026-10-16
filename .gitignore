@@ -1,0 +1,10 @@
+node_modules/
+.expo/
+dist/
+web-build/
+.env
+*.log
+ios/
+android/
+.convex/
+convex/_generated/

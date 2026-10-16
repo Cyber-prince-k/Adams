@@ -1,0 +1,10 @@
+{
+  "name": "adams-torch",
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["TorchModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.adamstorch.TorchModule"]
+  }
+}

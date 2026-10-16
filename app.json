@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "ADAMS",
+    "slug": "adams",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "adams",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.adams.assistant",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "ADAMS needs microphone access to listen for your voice commands.",
+        "NSSpeechRecognitionUsageDescription": "ADAMS uses speech recognition to understand your commands.",
+        "UIBackgroundModes": ["audio", "fetch", "processing"],
+        "BGTaskSchedulerPermittedIdentifiers": ["com.adams.wakeword"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0a0a"
+      },
+      "package": "com.adams.assistant",
+      "permissions": [
+        "RECORD_AUDIO",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MICROPHONE",
+        "RECEIVE_BOOT_COMPLETED",
+        "WAKE_LOCK",
+        "android.permission.CALL_PHONE",
+        "android.permission.READ_CONTACTS",
+        "android.permission.FLASHLIGHT",
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "server",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-av",
+      "expo-task-manager",
+      [
+        "expo-background-fetch",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow ADAMS to detect wake word in background."
+        }
+      ],
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Allow ADAMS to access the microphone for voice commands.",
+          "speechRecognitionPermission": "Allow ADAMS to recognize your speech."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
